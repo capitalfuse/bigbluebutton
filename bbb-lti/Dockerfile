@@ -1,5 +1,5 @@
-FROM java:8-jdk AS builder
-
+#FROM java:8-jdk AS builder
+FROM openjdk:8 AS builder
 RUN mkdir -p /root/tools \
  && cd /root/tools \
  && wget https://services.gradle.org/distributions/gradle-5.5.1-bin.zip \
@@ -39,7 +39,7 @@ RUN cd /source \
 
 RUN cd /source && grails war --stacktrace
 
-FROM tomcat:7-jre8
+FROM tomcat:8-jre8
 
 WORKDIR $CATALINA_HOME
 

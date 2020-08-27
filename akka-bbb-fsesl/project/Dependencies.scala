@@ -21,7 +21,7 @@ object Dependencies {
 
     // BigBlueButton
     val bbbCommons = "0.0.20-SNAPSHOT"
-    val bbbFsesl = "0.0.7-SNAPSHOT"
+    val bbbFsesl = "0.0.20-SNAPSHOT"
 
     // Test
     val scalaTest = "3.0.5"

@@ -1,7 +1,7 @@
-FROM kurento/kurento-media-server:6.13
+FROM kurento/kurento-media-server:6.14.0
 
 ARG APT_KEY="https://ubuntu.bigbluebutton.org/repo/bigbluebutton.asc"
-ARG APT_REPO="deb https://ubuntu.bigbluebutton.org/xenial-220-dev bigbluebutton-xenial main"
+ARG APT_REPO="deb https://ubuntu.bigbluebutton.org/bionic-230-dev bigbluebutton-bionic main"
 ARG CACHE_BUST=1
 
 ENV DEBIAN_FRONTEND noninteractive

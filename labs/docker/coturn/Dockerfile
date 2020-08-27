@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:bionic
 
 RUN apt-get update \
  && apt-get install -y coturn wget \
@@ -9,7 +9,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
   && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
   && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-COPY ssl /etc/letsencrypt/live/ssl
+# COPY ssl /etc/letsencrypt/live/ssl
 
 COPY ./turnserver.conf.tmpl /etc/turnserver.conf.tmpl
 

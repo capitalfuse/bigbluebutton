@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
  && apt-get -y install wget libedit-dev xmlstarlet apt-transport-https ca-certificates software-properties-common
 
-RUN echo "deb https://ubuntu.bigbluebutton.org/xenial-220/ bigbluebutton-xenial main " | tee /etc/apt/sources.list.d/bigbluebutton.list \
+RUN echo "deb https://ubuntu.bigbluebutton.org/bionic-230-dev/ bigbluebutton-bionic main " | tee /etc/apt/sources.list.d/bigbluebutton.list \
  && wget http://ubuntu.bigbluebutton.org/repo/bigbluebutton.asc -O- | apt-key add - \
  && add-apt-repository ppa:bigbluebutton/support \
  && apt-get update \

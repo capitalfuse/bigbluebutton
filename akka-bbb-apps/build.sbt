@@ -7,7 +7,7 @@ enablePlugins(JavaServerAppPackaging)
 enablePlugins(UniversalPlugin)
 enablePlugins(DebianPlugin)
 
-version := "0.0.4"
+version := "0.0.20"
 
 val compileSettings = Seq(
   organization := "org.bigbluebutton",

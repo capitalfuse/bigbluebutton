@@ -5,7 +5,7 @@ RUN set -x \
  && useradd -m -G users -s /bin/bash meteor
 
 RUN apt-get update \
- && apt-get -y install jq \
+ && apt-get -y install jq g++ build-essential \
  && rm -rf /var/lib/apt/lists/*
 
 COPY . /source
